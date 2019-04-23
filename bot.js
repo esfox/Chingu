@@ -1,3 +1,15 @@
+const http = require('http');  
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  console.log(Date.now() + " Ping Received");
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
+
 const Discord = require('discord.js')
 const bot = new Discord.Client();
 
@@ -8,11 +20,11 @@ const reminder = require('./utils/reminder');
 
 const data = require('./data/data.json');
 const config = require('./data/config.json');
-a
+
 const args = process.argv.slice(2).shift();
-// bot
-//     .login(process.env.TOKEN || args)
-//     .catch(error => { if(error) console.log('gitgud haha') });
+bot
+    .login(process.env.TOKEN || args)
+    .catch(error => { if(error) console.log('gitgud haha') });
 
 bot.on('ready', async _ =>
 {

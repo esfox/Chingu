@@ -13,7 +13,6 @@ exports.startWordReminder = callback =>
 
     wordReminder = schedule.scheduleJob(rule, _ =>
     {
-        callback();
     }); 
 }
 
