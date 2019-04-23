@@ -17,11 +17,7 @@ module.exports = class
 {
     constructor(message)
     { 
-        if
-        (
-            message.author.id !== config.owner &&
-            message.member.roles.some(r => r.id !== config.teacher)
-        )
+        if(message.member.roles.every(r => r.id !== config.teacher))
         {
             this.notTeacher = true;
             message.channel.send(message.response

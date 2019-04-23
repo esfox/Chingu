@@ -73,7 +73,7 @@ function remindWordOfTheDay()
 
     function send()
     {
-        bot.channels.get('413484346624704513')
+        bot.channels.get('385956869077860352')
             .send('<@247955535620472844>', embed)
             .catch(console.error);
     }

@@ -3,7 +3,7 @@ const { prefix, owner } = require('../data/config.json');
 exports['ping, ㅍ'] = message => message.channel.send(message.response
     .embed(`${~~message.client.ping} ms`));
 
-exports['help, ㄷ'] = help = message =>
+exports['help, ㄷ'] = message =>
 {
     const description = `**Command Prefix: \`${prefix}\`**\n`
         + 'I have **Korean** versions of my **commands**!\n‍';
