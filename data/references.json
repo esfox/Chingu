@@ -1,0 +1,249 @@
+{
+	"hangul": "ㅂ,ㅈ,ㄷ,ㄱ,ㅅ,ㅃ,ㅉ,ㄸ,ㄲ,ㅆ,ㅁ,ㄴ,ㅇ,ㄹ,ㅎ,ㅋ,ㅌ,ㅊ,ㅍ,ㅃ,ㅉ,ㄸ,ㄲ,ㅆ,ㅔ,ㅐ,ㅑ,ㅕ,ㅛ,ㅣ,ㅏ,ㅓ,ㅗ,ㅡ,ㅜ,ㅠ,ㅒ,ㅖ",
+	"nouns": [
+		{
+			"text": "사람",
+			"meaning": "Person"
+		},
+		{
+			"text": "저",
+			"meaning": "i|me"
+		},
+		{
+			"text": "우리",
+			"meaning": "we|us"
+		},
+		{
+			"text": "집",
+			"meaning": "house|home"
+		},
+		{
+			"text": "학교",
+			"meaning": "school"
+		},
+		{
+			"text": "화장실",
+			"meaning": "washroom|bathroom|toilet|toilet room"
+		},
+		{
+			"text": "남자",
+			"meaning": "man|male"
+		},
+		{
+			"text": "여자",
+			"meaning": "woman|female"
+		},
+		{
+			"text": "아이",
+			"meaning": "child|kid"
+		},
+		{
+			"text": "친구",
+			"meaning": "friend"
+		},
+		{
+			"text": "사랑",
+			"meaning": "love"
+		},
+		{
+			"text": "나무",
+			"meaning": "tree"
+		},
+		{
+			"text": "물고기",
+			"meaning": "fish"
+		},
+		{
+			"text": "책",
+			"meaning": "book"
+		}
+	],
+	"verbs": [
+		{
+			"text": "하다",
+			"meaning": "do|to do",
+			"conjugation": {
+				"present tense": "해|해요",
+				"past tense": "했어|했어요",
+				"future tense": "할 거야|할 거예요",
+				"\"want to\" form": "하고 싶어"
+			}
+		},
+		{
+			"text": "있다",
+			"meaning": "have|to have|exist|to exist",
+			"conjugation": {
+				"present tense": "있어|있어요",
+				"past tense": "있었어|있었어요",
+				"future tense": "있을 거야|있을 거예요"
+			}
+		},
+		{
+			"text": "가다",
+			"meaning": "go|to go",
+			"conjugation": {
+				"present tense": "가|가요",
+				"past tense": "갔어|갔어요",
+				"future tense": "갈 거야|갈 거예요"
+			}
+		},
+		{
+			"text": "먹다",
+			"meaning": "eat|to eat",
+			"conjugation": {
+				"present tense": "먹어|먹어요",
+				"past tense": "먹었어|먹었어요",
+				"future tense": "먹을 거야|먹을 거예요"
+			}
+		},
+		{
+			"text": "자다",
+			"meaning": "sleep|to sleep",
+			"conjugation": {
+				"present tense": "자|자요",
+				"past tense": "잤어|잤어요",
+				"future tense": "잘 거야|잘 거예요"
+			}
+		},
+		{
+			"text": "마시다",
+			"meaning": "drink|to drink",
+			"conjugation": {
+				"present tense": "마셔|마셔요"
+			}
+		}
+	],
+	"phrases": [
+		{
+			"text": "안녕하세요",
+			"meaning": "Hello|Hi"
+		},
+		{
+			"text": "안녕",
+			"meaning": "Hello|Hi|Goodbye",
+			"notes": "This word is used in informal situations and if the person you're talking to is your family, friend or a person that is somehow close to you."
+		},
+		{
+			"text": "감사합니다 or 고마워요",
+			"meaning": "Thank you|Thanks",
+			"notes": "감사합니다 is a more polite version of 고마워요."
+		},
+		{
+			"text": "반갑습니다",
+			"meaning": "Nice to meet you|Nice to see you"
+		},
+		{
+			"text": "미안해요",
+			"meaning": "Sorry"
+		},
+		{
+			"text": "안녕히 가세요 or 안녕히 계세요",
+			"meaning": "Goodbye|Bye",
+			"notes": "These are the formal, honorific versions of \"goodbye\".\n안녕히 가세요 is said when the __other person__ is **leaving**.\n안녕히 계세요 is said when the __other person__ is **staying**."
+		},
+		{
+			"text": "잘 가요",
+			"meaning": "Go well|Goodbye|Bye",
+			"notes": "This is said when the __other person__ is **leaving**.\nAlthough it can mean \"goodbye\", it literally means **\"go well\"**."
+		},
+		{
+			"text": "잘 자요",
+			"meaning": "Sleep well|Good night",
+			"notes": "Literally means **\"sleep well\"** but could also mean \"good night\"."
+		},
+		{
+			"text": "네",
+			"meaning": "Yes"
+		},
+		{
+			"text": "아니요",
+			"meaning": "No"
+		}
+	],
+	"numbers": {
+		"native": [
+			{
+				"text": "하나",
+				"meaning": "1|one"
+			},
+			{
+				"text": "둘",
+				"meaning": "2|two"
+			},
+			{
+				"text": "셋",
+				"meaning": "3|three"
+			},
+			{
+				"text": "넷",
+				"meaning": "4|four"
+			},
+			{
+				"text": "다섯",
+				"meaning": "5|five"
+			},
+			{
+				"text": "여섯",
+				"meaning": "6|six"
+			},
+			{
+				"text": "일곱",
+				"meaning": "7|seven"
+			},
+			{
+				"text": "여덟",
+				"meaning": "8|eight"
+			},
+			{
+				"text": "아홉",
+				"meaning": "9|nine"
+			},
+			{
+				"text": "열",
+				"meaning": "10|ten"
+			}
+		],
+		"sino": [
+			{
+				"text": "일",
+				"meaning": "1|one"
+			},
+			{
+				"text": "이",
+				"meaning": "2|two"
+			},
+			{
+				"text": "삼",
+				"meaning": "3|three"
+			},
+			{
+				"text": "사",
+				"meaning": "4|four"
+			},
+			{
+				"text": "오",
+				"meaning": "5|five"
+			},
+			{
+				"text": "육",
+				"meaning": "6|six"
+			},
+			{
+				"text": "칠",
+				"meaning": "7|seven"
+			},
+			{
+				"text": "팔",
+				"meaning": "8|eight"
+			},
+			{
+				"text": "구",
+				"meaning": "9|nine"
+			},
+			{
+				"text": "십",
+				"meaning": "10|ten"
+			}
+		]
+	}
+}
