@@ -8,7 +8,7 @@ const reminder = require('./utils/reminder');
 
 const data = require('./data/data.json');
 const config = require('./data/config.json');
-
+a
 const args = process.argv.slice(2).shift();
 // bot
 //     .login(process.env.TOKEN || args)
