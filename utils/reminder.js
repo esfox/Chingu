@@ -9,6 +9,7 @@ exports.startWordReminder = callback =>
 
     const rule = new schedule.RecurrenceRule();
     rule.hour = date.getHours();
+    rule.minute = 0;
 
     wordReminder = schedule.scheduleJob(rule, _ =>
     {
