@@ -16,20 +16,22 @@ const types =
 module.exports = class
 {
     constructor(message)
-    {
-        if
-        (
-            message.author.id !== config.owner &&
-            message.member.roles.some(r => r.id !== config.teacher)
-        )
-            return message.channel.send(message.response
+    { 
+        if(message.member.roles.every(r => r.id !== config.teacher))
+        {
+            this.notTeacher = true;
+            message.channel.send(message.response
                 .problem("You don't have permission to use this command."));
-        
+        }
+            
         this.message = message;
     }
 
     async 단어()
     {
+        if(this.notTeacher)
+            return;
+      
         const message = this.message;
 
         let parameters = message.parameters;
@@ -84,6 +86,9 @@ module.exports = class
 
     ㅁㅈㄹ()
     {
+        if(this.notTeacher)
+            return;
+      
         const message = this.message;
         
         const response = '📖  All References\n\n'
@@ -103,6 +108,9 @@ module.exports = class
 
     async ㅅㅎㅇ()
     {
+        if(this.notTeacher)
+            return;
+      
         const message = this.message;
 
         let parameters = message.parameters;
@@ -164,6 +172,9 @@ module.exports = class
     
     자료()
     {
+        if(this.notTeacher)
+            return;
+        
         this.message.channel.send(
         { 
             files: 
@@ -176,6 +187,9 @@ module.exports = class
 
     갱신자료()
     {
+        if(this.notTeacher)
+            return;
+      
         const message = this.message;
         
         const file = message.attachments.first();
@@ -204,10 +218,10 @@ module.exports = class
     }
 
     refbackup()
-    {
+    { 
         const message = this.message;
-
-        if(message.author.id !== config.owner) 
+      
+        if(message.author.id !== config.owner)
             return;
 
         fs.writeFile('./data/references_backup.json', 
@@ -223,6 +237,9 @@ module.exports = class
 
 async function addReference(message, type)
 {
+    if(this.notTeacher)
+        return;
+  
     let parameters = message.parameters;
     if(!parameters || parameters.length === 0 || !parameters.includes('='))
         return wrongFormat(message);
@@ -235,7 +252,7 @@ async function addReference(message, type)
     if(text.length === 0 || meaning.length === 0)
         return wrongFormat(message);
 
-    if(type.some(t => t.text.match(text) || t.meaning.match(meaning)))
+    if(type.some(t => t.text.match(text)))
         return message.channel.send(message.response
             .problem("That's already added"));
         
