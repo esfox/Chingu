@@ -23,7 +23,6 @@ module.exports = class
             message.channel.send(message.response
                 .problem("You don't have permission to use this command."));
         }
-            
         
         this.message = message;
     }
