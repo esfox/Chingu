@@ -19,7 +19,7 @@ module.exports = class
     {
         if
         (
-            message.author.id !== config.owner &&
+            message.author.id !== config.owner ||
             message.member.roles.some(r => r.id !== config.teacher)
         )
             return message.channel.send(message.response
