@@ -72,5 +72,5 @@ misc/
 # .vscode file
 .vscode
 
-# # glitch files
-# shrinkwrap.yaml
+# glitch files
+shrinkwrap.yaml
