@@ -53,11 +53,19 @@ function remindWordOfTheDay()
     }
 
     const wordData = words.shift();
-    embed.addField('Next Word...', `${wordData.word} = ${wordData.meaning}`);
-    embed.addField('Post Text', '```' + wordData.post + '```');
-    embed.setFooter(`${words.length} words saved.`);
+    fs.writeFile(`./data/${file}.json`, JSON.stringify(contents, null, '\t'), 
+        error =>
+        {
+            if(error) 
+                return console.error(error);
 
-    send();
+            embed.addField('Next Word...', `${wordData.word}`
+                + ` = ${wordData.meaning}`);
+            embed.addField('Post Text', '```' + wordData.post + '```');
+            embed.setFooter(`${words.length} words saved.`);
+                
+            send();
+        });
 
     function send()
     {
