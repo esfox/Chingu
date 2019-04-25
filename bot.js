@@ -65,7 +65,7 @@ function remindWordOfTheDay()
     }
 
     const wordData = words.shift();
-    fs.writeFile(`./data/${file}.json`, JSON.stringify(contents, null, '\t'), 
+    fs.writeFile(`./data/data.json`, JSON.stringify(contents, null, '\t'), 
         error =>
         {
             if(error) 
