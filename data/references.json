@@ -56,6 +56,14 @@
 		{
 			"text": "책",
 			"meaning": "book"
+		},
+		{
+			"text": "방",
+			"meaning": "room"
+		},
+		{
+			"text": "당",
+			"meaning": "ground"
 		}
 	],
 	"verbs": [
@@ -111,6 +119,10 @@
 			"conjugation": {
 				"present tense": "마셔|마셔요"
 			}
+		},
+		{
+			"text": "오다",
+			"meaning": "to come"
 		}
 	],
 	"phrases": [

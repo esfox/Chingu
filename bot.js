@@ -1,3 +1,15 @@
+const http = require('http');  
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  console.log(Date.now() + " Ping Received");
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
+
 const Discord = require('discord.js')
 const bot = new Discord.Client();
 
@@ -69,8 +81,8 @@ function remindWordOfTheDay()
 
     function send()
     {
-        bot.channels.get('413484346624704513')
-            .send('<@247955535620472844>', embed)
+        bot.channels.get('385956869077860352')
+            .send(`<@&${config.teacher}>`, embed)
             .catch(console.error);
     }
 }
