@@ -48,8 +48,8 @@ exports['dictionary, ㅅㅈ'] = async message =>
     const word = dictionary.entry.replace(/<b>|<\/b>/g, '');
     const meanings = dictionary.pos.shift().meanings
         .reduce((meanings, m) => `${meanings}• ${m.meaning}\n`, '') + 
-        '\nSee more results [here].'
-            + `(https://endic.naver.com/search.nhn?sLn=en&query=${word})`;
+        '\nSee more results [here]'
+            + `(https://endic.naver.com/search.nhn?sLn=en&query=${word}).`;
     
     message.channel.send(message.response.embed(word, meanings)
         .setFooter('from endic.naver.com', 'https://i.imgur.com/VQ4Zm0h.jpg'));
