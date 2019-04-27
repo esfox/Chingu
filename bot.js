@@ -23,8 +23,8 @@ const config = require('./data/config.json');
 
 const args = process.argv.slice(2).shift();
 bot
-    .login(process.env.TOKEN || args)
-    .catch(error => { if(error) console.log('gitgud haha') });
+    // .login(process.env.TOKEN || args)
+    // .catch(error => { if(error) console.log('gitgud haha') });
 
 bot.on('ready', async _ =>
 {
