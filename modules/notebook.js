@@ -18,6 +18,10 @@ module.exports = class
             return this.send.missing('note');
 
         const note = message.parameters.trim();
+
+        if(note.length > 360)
+            return this.send.problem('Please do not exceed 360 characters');
+
         const saved = await database.addNote(message.author.id, note)
             .catch(response => this.send.problem(response));
 
