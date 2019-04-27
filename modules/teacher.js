@@ -17,14 +17,35 @@ module.exports = class
 {
     constructor(message)
     { 
-        if(message.member.roles.every(r => r.id !== config.teacher))
-        {
+        if(message.channel.type === 'dm')
             this.notTeacher = true;
-            message.channel.send(message.response
-                .problem("You don't have permission to use this command."));
+        else
+        {
+            if(message.member.roles.every(r => r.id !== config.teacher))
+            {
+                this.notTeacher = true;
+                message.channel.send(message.response
+                    .problem("You don't have permission to use this command."));
+            }
         }
             
         this.message = message;
+    }
+
+    async 단어보기()
+    {
+        if(this.notTeacher)
+            return;
+
+        const message = this.message;
+
+        const embed = message.response.embed('📖 Next Words of the Day');
+        embed.setDescription(data.daily_words.reduce((text, w) =>
+            `${text}• ${w.word} \`${w.pronunciation}\` - **${w.meaning}**\n`, 
+            ''));
+
+        message.channel.send(embed)
+            .catch(console.error);
     }
 
     async 단어()
