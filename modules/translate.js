@@ -48,7 +48,7 @@ exports['dictionary, ㅅㅈ'] = async message =>
     const word = dictionary.entry.replace(/<b>|<\/b>/g, '');
     const meanings = dictionary.pos.shift().meanings
         .reduce((meanings, m) => `${meanings}• ${m.meaning}\n`, '') + 
-        '\nSee more results [here]'
+        '\nSee more results [__here__]'
             + `(https://endic.naver.com/search.nhn?sLn=en&query=${word}).`;
     
     message.channel.send(message.response.embed(word, meanings)
