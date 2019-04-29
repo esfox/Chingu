@@ -19,7 +19,7 @@ exports['translate, ㅂ'] = async message =>
     text = await usePapago(message, text);
     message.channel.send(message.response
         .embed('🌐 Translation', text)
-        .setFooter('Translation by papago.com', 
+        .setFooter('Translation by Papago', 
             'https://i.imgur.com/3x3h8hm.png'));
 }
 
@@ -49,7 +49,8 @@ exports['dictionary, ㅅㅈ'] = async message =>
     const meanings = dictionary.pos.shift().meanings
         .reduce((meanings, m) => `${meanings}• ${m.meaning}\n`, '') + 
         '\nSee more results [__here__]'
-            + `(https://endic.naver.com/search.nhn?sLn=en&query=${word}).`;
+            + '(https://endic.naver.com/search.nhn?sLn=en&query='
+            + `${word.replace(/\s/g, '+')}).`;
     
     message.channel.send(message.response.embed(word, meanings)
         .setFooter('from endic.naver.com', 'https://i.imgur.com/VQ4Zm0h.jpg'));
