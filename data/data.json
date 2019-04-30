@@ -11,6 +11,18 @@
 			"pronunciation": "o reun jjok",
 			"meaning": "Right",
 			"post": "@everyone\n오른쪽 ||`o reun jjok`|| = __**Right**__"
+		},
+		{
+			"word": "명사",
+			"pronunciation": "myeong sa",
+			"meaning": "Noun",
+			"post": "@everyone\n명사 ||`myeong sa`|| = __**Noun**__"
+		},
+		{
+			"word": "동사",
+			"pronunciation": "dong sa",
+			"meaning": "Verb",
+			"post": "@everyone\n동사 ||`dong sa`|| = __**Verb**__"
 		}
 	],
 	"weekly_lessons": []
