@@ -27,7 +27,7 @@ exports['help, ㄷ'] = message =>
             content:
                 '**`note / ㄴ <note>`** *(노트 - note)*\n'
                 + '‍ ‍ ‍ ‍ ‍ ‍→ write a note on your notebook.\n'
-                + ` ‍ ‍ ‍ ‍ ‍Example: \`${prefix}ㅆ An important link`
+                + ` ‍ ‍ ‍ ‍ ‍Example: \`${prefix}ㄴ An important link`
                     + ' https://papago.naver.com/?sk=ko&tk=en`\n\n'
 
                 + '**`notebook / ㄱㅊ`** *(공책 - notebook)*\n'
