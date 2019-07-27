@@ -60,7 +60,7 @@ function remindWordOfTheDay()
     const words = data.daily_words;
     if(words.length === 0)
     {
-        embed.setDescription("**There's no next word of the day!**");
+        embed.setDescription("**There is no next word of the day!**");
         return send();
     }
 
