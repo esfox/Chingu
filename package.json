@@ -4,8 +4,8 @@
   "description": "",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bot"
+    "start": "node bot",
+    "pull": "git pull && refresh"
   },
   "author": "",
   "license": "ISC",
