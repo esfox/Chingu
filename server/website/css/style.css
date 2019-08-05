@@ -25,6 +25,10 @@
   color: #aeaeae !important;
 }
 
+.input-label {
+  font-size: 13px !important;
+}
+
 .title {
   color: #dcddde !important;
   margin-bottom: 0px;

@@ -50,28 +50,28 @@
         <div class="row">
           <form class="col s12 fields">
             <div class="row">
-              <div class="input-field col s6">
+              <div class="input-field col s4">
                 <!-- <i class="material-icons prefix">mode_edit</i> -->
                 <label for="word" class="input-label">Word</label>
                 <input id="word" type="text" placeholder="하다"
                         class="active validate input-value" required />
               </div>
 
-              <div class="input-field col s6">
-                <label for="pronunciation" class="input-label">Pronunciation / Romanization</label>
-                <input id="pronunciation" type="text" placeholder="ha da"
+              <div class="input-field col s4">
+                <label for="romanization" class="input-label">Romanization</label>
+                <input id="romanization" type="text" placeholder="ha da"
                       class="active validate input-value" required>
               </div>
-            </div>
 
-            <div class="row">
-              <div class="input-field col s6">
+              <div class="input-field col s4">
                 <label for="translation" class="input-label">English Translation</label>
                 <input placeholder="to do" id="translation" type="text"
                       class="active validate input-value" required />
               </div>
+            </div>
 
-              <div class="input-field col s6">
+            <div class="row">
+              <div class="input-field col s12">
                 <label for="example_sentence" class="input-label">Example Sentence</label>
                 <input id="example_sentence" type="text" placeholder="한국어 공부를 많이 했어요."
                       class="active validate input-value" required>
@@ -84,8 +84,8 @@
                 <input id="example_translation" type="text" placeholder="I studied Korean a lot." 
                       class="active validate input-value" required>
               </div>
-              <div class="col s12">
-                <label for="test_translation" class="input-label" style="font-size: 10px">Test Translation</label>
+              <div class="col s12" style="margin-top: 20px">
+                <label for="test_translation" class="input-label" style="font-size: 11px !important;">Test Translation</label>
                 <div id="test_translation" class="active input-value" placeholder="오늘은 많은 일을 해야 돼요." contenteditable="true"></div>
                 <!-- <textarea placeholder="Test Translation" id="test_translation" class="active input-value"></textarea> -->
               </div>

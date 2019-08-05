@@ -24,7 +24,7 @@ exports.init = bot =>
 		const
 		{
 			word,
-			pronunciation,
+			romanization,
 			translation,
 			example_sentence,
 			example_translation,
@@ -35,13 +35,13 @@ exports.init = bot =>
 			.setColor(embedColor)
 			.setTitle('📌  Word of the Day Added')
 			.addField('Word', word, true)
-			.addField('Pronunciation', pronunciation, true)
+			.addField('Romanization', romanization, true)
 			.addField('Translation', translation, true)
 			.addField('Example Sentence', example_sentence)
 			.addField('Example Sentence Translation', example_translation)
 			.addField('Test Translation', test_translation);
 
-		bot.channels.get('385956869077860352').send(embed);
+		bot.users.get('247955535620472844').send(embed);
 
 		response.sendStatus(200);
 	});
