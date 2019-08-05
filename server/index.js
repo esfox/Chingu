@@ -11,9 +11,19 @@ app.use(express.static('server/website'));
 app.get('/wotd', (request, response) =>
 	response.sendFile(__dirname + '/website/index.html'));
 
-app.listen(process.env.PORT);
-
-setInterval(() =>
+exports.init = bot =>
 {
-	http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);
+	
+
+	start();
+}
+
+function start()
+{
+	app.listen(process.env.PORT);
+	
+	setInterval(() =>
+	{
+		http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+	}, 280000);
+}

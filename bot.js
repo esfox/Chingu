@@ -2,7 +2,7 @@ require('./server');
 
 const Discord = require('discord.js')
 const bot = new Discord.Client();
-require('./server/discord')
+require('./server/discord').init(bot);
 
 const fs = require('fs');
 const database = require('./data/database');

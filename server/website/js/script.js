@@ -18,8 +18,6 @@ function done()
     data[id] = value || innerHTML;
     return data;
   }, {});
-
-  console.log(data);
 }
 
 document.onkeydown = event =>
