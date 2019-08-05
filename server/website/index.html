@@ -37,12 +37,12 @@
         </div>
       </nav> -->
 
-      <div id="send-modal" class="modal">
+      <div id="sent-modal" class="modal dialog">
         <div class="modal-content">
           <h4>Word of the Day Added</h4>
-          <p>Add a new word of tha day?</p>
+          <p>Add a new word of the day?</p>
         </div>
-        <div>
+        <div class="modal-footer">
           <a class="modal-close waves-effect waves-green btn-flat">No</a>
         </div>
       </div>
@@ -103,7 +103,7 @@
         </div>
       </div>
       <div class="finish">
-        <a class="btn-floating btn-large waves-effect waves-light green" onclick="done()">
+        <a class="btn-floating btn-large waves-effect waves-light green modal-trigger" onclick="done()" data-target="sent-modal">
           <i class="material-icons">check</i>
         </a>
       </div>

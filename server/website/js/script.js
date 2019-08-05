@@ -11,11 +11,7 @@ const fields =
 
 fields.forEach((id, i) => fields[i] = document.getElementById(id));
 
-document.addEventListener('DOMContentLoaded', () =>
-{
-  const elems = document.querySelectorAll('.modal');
-  var instances = M.Modal.init(elems);
-});
+let modal = M.Modal.init(document.getElementById('sent-modal'));
 
 async function done()
 {
@@ -32,9 +28,9 @@ async function done()
   //   body: JSON.stringify(data)
   // });
 
-
+  modal.open();
   
-  window.location.reload();
+  // window.location.reload();
 }
 
 document.onkeydown = event =>

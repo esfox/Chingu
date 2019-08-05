@@ -2,6 +2,10 @@
   background-color: #36393f;
 }
 
+.dialog {
+  background-color: #36393f !important;
+}
+
 .main-content {
   min-height: 100vh !important;
 }
