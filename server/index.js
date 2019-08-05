@@ -1,4 +1,6 @@
 const Discord = require('discord.js');
+const { embedColor } = require('../data/config.json');
+
 const http = require('http');
 const express = require('express');
 const bodyparser = require('body-parser');
@@ -22,19 +24,19 @@ exports.init = bot =>
 		const
 		{
 			word,
-			translation,
 			pronunciation,
+			translation,
 			example_sentence,
 			example_translation,
 			test_translation,
 		} = request.body;
 
 		const embed = new Discord.RichEmbed()
-			.setColor()
-			.setTitle('New Word of the Day Added')
+			.setColor(embedColor)
+			.setTitle('📌  Word of the Day Added')
 			.addField('Word', word, true)
-			.addField('Translation', translation, true)
 			.addField('Pronunciation', pronunciation, true)
+			.addField('Translation', translation, true)
 			.addField('Example Sentence', example_sentence)
 			.addField('Example Sentence Translation', example_translation)
 			.addField('Test Translation', test_translation);
