@@ -35,12 +35,10 @@ async function done()
     if(field.id === 'test_translation')
       field.innerHTML = '';
     else
-    {
-      field.
       field.value = '';
-    }
   });
 
+  M.updateTextFields();
   M.toast({html: 'New Word of the Day added.', classes: 'rounded'});
 }
 

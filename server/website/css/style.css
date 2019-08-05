@@ -30,7 +30,9 @@
   margin-bottom: 0px;
 }
 
-.input-value {
+.input-value,
+.active.validate.input-value.valid {
+  background-color: #36393f !important;
   color: #dcddde !important;
 }
 
