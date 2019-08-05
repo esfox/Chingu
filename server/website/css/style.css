@@ -72,8 +72,3 @@
 .btn-floating {
   margin: 48px;
 }
-
-.toast {
-  display: flex !important;
-  justify-content: center;
-}

@@ -28,7 +28,20 @@ async function done()
     body: JSON.stringify(data)
   });
 
-  M.toast({html: 'I am a toast!', classes: 'rounded', displayLength: 3600000});
+  modal.close();
+
+  fields.forEach(field =>
+  {
+    if(field.id === 'test_translation')
+      field.innerHTML = '';
+    else
+    {
+      field.
+      field.value = '';
+    }
+  });
+
+  M.toast({html: 'New Word of the Day added.', classes: 'rounded'});
 }
 
 document.onkeydown = event =>
