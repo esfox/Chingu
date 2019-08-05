@@ -7,7 +7,7 @@ app.get("/", (_, response) =>
 	response.sendStatus(200);
 });
 
-// app.use(express.static('/website'));
+app.use(express.static('server/website'));
 app.get('/wotd', (request, response) =>
 	response.sendFile(__dirname + '/website/index.html'));
 
@@ -16,4 +16,4 @@ app.listen(process.env.PORT);
 setInterval(() =>
 {
 	http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);	
+}, 280000);

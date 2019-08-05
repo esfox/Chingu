@@ -55,54 +55,56 @@ module.exports = class
 
 		const message = this.message;
 
-		let parameters = message.parameters;
-		if(!parameters)
-			return message.channel.send(message.response
-				.problem('Please include the word.'));
+		message.channel.send('https://esfox-chingu.glitch.me/wotd');
 
-		parameters = utils.cleanString(parameters);
+		// let parameters = message.parameters;
+		// if(!parameters)
+		// 	return message.channel.send(message.response
+		// 		.problem('Please include the word.'));
 
-		let openParenthesis = parameters.indexOf('(');
-		let closeParenthesis = parameters.indexOf(')');
+		// parameters = utils.cleanString(parameters);
 
-		let pronunciation = parameters.match(/\(([^()]+)\)/g);
-		if(openParenthesis < 0 || closeParenthesis < 0 ||
-			pronunciation.length === 0)
-			return message.channel.send(message.response
-				.problem('Please include the pronunciation.'));
+		// let openParenthesis = parameters.indexOf('(');
+		// let closeParenthesis = parameters.indexOf(')');
 
-		pronunciation = pronunciation.shift();
-		pronunciation = pronunciation.substr(1, pronunciation.length - 2);
+		// let pronunciation = parameters.match(/\(([^()]+)\)/g);
+		// if(openParenthesis < 0 || closeParenthesis < 0 ||
+		// 	pronunciation.length === 0)
+		// 	return message.channel.send(message.response
+		// 		.problem('Please include the pronunciation.'));
 
-		let word = parameters.substr(0, openParenthesis).trim();
-		if(word.length === 0)
-			return message.channel.send(message.response
-				.problem('Please include the word.'));
+		// pronunciation = pronunciation.shift();
+		// pronunciation = pronunciation.substr(1, pronunciation.length - 2);
 
-		if(word.split(' ').length > 1)
-			return message.channel.send(message.response
-				.problem('Please include one word only.'));
+		// let word = parameters.substr(0, openParenthesis).trim();
+		// if(word.length === 0)
+		// 	return message.channel.send(message.response
+		// 		.problem('Please include the word.'));
 
-		let meaning = parameters.substr(closeParenthesis + 1).trim();
-		if(meaning.length === 0)
-			return message.channel.send(message.response
-				.problem('Please include the meaning of the word.'));
+		// if(word.split(' ').length > 1)
+		// 	return message.channel.send(message.response
+		// 		.problem('Please include one word only.'));
 
-		if(data.daily_words.some(item => item.word === word))
-			return message.channel.send(message.response
-				.problem('That word is already included.'));
+		// let meaning = parameters.substr(closeParenthesis + 1).trim();
+		// if(meaning.length === 0)
+		// 	return message.channel.send(message.response
+		// 		.problem('Please include the meaning of the word.'));
 
-		const post = `@everyone\n${word}`
-			+ ` ||\`${pronunciation}\`|| = __**${meaning}**__`;
+		// if(data.daily_words.some(item => item.word === word))
+		// 	return message.channel.send(message.response
+		// 		.problem('That word is already included.'));
 
-		data.daily_words.push({ word, pronunciation, meaning, post });
+		// const post = `@everyone\n${word}`
+		// 	+ ` ||\`${pronunciation}\`|| = __**${meaning}**__`;
 
-		const saved = await saveData();
-		if(!saved)
-			return errorOccurred(message);
+		// data.daily_words.push({ word, pronunciation, meaning, post });
 
-		message.channel.send(message.response
-			.embed('✅  Added a new word of the day'));
+		// const saved = await saveData();
+		// if(!saved)
+		// 	return errorOccurred(message);
+
+		// message.channel.send(message.response
+		// 	.embed('✅  Added a new word of the day'));
 	}
 
 	ㅁㅈㄹ()
