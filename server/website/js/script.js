@@ -21,16 +21,19 @@ async function done()
     return data;
   }, {});
 
-  // await fetch(`https://esfox-chingu.glitch.me/wotd`,
-  // {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify(data)
-  // });
+  await fetch(`https://esfox-chingu.glitch.me/wotd`,
+  {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  });
 
-  modal.open();
-  
-  // window.location.reload();
+  window.location.reload();
+}
+
+function cancel()
+{
+  window.close();
 }
 
 document.onkeydown = event =>

@@ -37,17 +37,6 @@
         </div>
       </nav> -->
 
-      <div id="sent-modal" class="modal">
-        <div class="modal-content">
-          <h4>Word of the Day Added</h4>
-          <p>Add a new word of the day?</p>
-        </div>
-        <div class="modal-footer">
-          <a class="modal-close waves-effect waves-light btn-flat green">Yes</a>
-          <a class="modal-close waves-effect waves-light btn-flat">No</a>
-        </div>
-      </div>
-
       <div class="section no-pad-bot" id="index-banner">
         <div class="container">
           <h1 class="header center title">WotD Portal</h1>
@@ -104,9 +93,20 @@
         </div>
       </div>
       <div class="finish">
-        <a class="btn-floating btn-large waves-effect waves-light green modal-trigger" onclick="done()" data-target="sent-modal">
+        <a href="#sent-modal"class="btn-floating btn-large waves-effect waves-light green modal-trigger">
           <i class="material-icons">check</i>
         </a>
+      </div>
+
+      <div id="sent-modal" class="modal">
+        <div class="modal-content">
+          <h4>Word of the Day Added</h4>
+          <p>Add a new word of the day?</p>
+        </div>
+        <div class="modal-footer">
+          <a class="modal-close waves-effect waves-light btn-flat green" onclick="done()">Yes</a>
+          <a class="modal-close waves-effect waves-light btn-flat" onclick="cancel()">No</a>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="js/materialize.min.js"></script>
