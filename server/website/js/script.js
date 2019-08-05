@@ -19,11 +19,10 @@ function done()
     return data;
   }, {});
 
-  console.log(data);
-
   fetch(`https://esfox-chingu.glitch.me/wotd`,
   {
     method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
   });
 }
