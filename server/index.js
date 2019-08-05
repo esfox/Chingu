@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 const http = require('http');
 const express = require('express');
 const bodyparser = require('body-parser');
@@ -18,8 +19,28 @@ exports.init = bot =>
 {
 	app.post('/wotd', (request, response) =>
 	{
-		bot.users.get('247955535620472844')
-			.send(JSON.stringify(request.body, null, 2));
+		const
+		{
+			word,
+			translation,
+			pronunciation,
+			example_sentence,
+			example_translation,
+			test_translation,
+		} = request.body;
+
+		const embed = new Discord.RichEmbed()
+			.setColor()
+			.setTitle('New Word of the Day Added')
+			.addField('Word', word, true)
+			.addField('Translation', translation, true)
+			.addField('Pronunciation', pronunciation, true)
+			.addField('Example Sentence', example_sentence)
+			.addField('Example Sentence Translation', example_translation)
+			.addField('Test Translation', test_translation);
+
+		bot.users.get('247955535620472844').send(embed);
+
 		response.sendStatus(200);
 	});
 
