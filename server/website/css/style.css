@@ -2,8 +2,18 @@
   background-color: #36393f;
 }
 
-.dialog {
+.modal,
+.modal-footer {
+  color: #dcddde !important;
   background-color: #36393f !important;
+}
+
+.modal-content > h4 {
+  font-size: 30px; 
+}
+
+.modal a {
+  color: #dcddde !important; 
 }
 
 .main-content {
