@@ -1,3 +1,5 @@
+// TODO: make fields into Object
+
 /** @type {Element[]} */
 const fields =
 [
@@ -38,12 +40,20 @@ async function done()
       field.value = '';
   });
 
-  M.updateTextFields();
   M.toast({html: 'New Word of the Day added.', classes: 'rounded'});
+}
+
+function confirm()
+{
+  // TODO: Validation
+  modal.open();
 }
 
 document.onkeydown = event =>
 {
+  if(event.ctrlKey && event.key === 'Enter')
+    return confirm();
+
   if(modal.isOpen && event.key === 'Enter')
-    done();
+    return done();
 }

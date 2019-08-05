@@ -41,7 +41,7 @@ exports.init = bot =>
 			.addField('Example Sentence Translation', example_translation)
 			.addField('Test Translation', test_translation);
 
-		bot.users.get('247955535620472844').send(embed);
+		bot.channels.get('385956869077860352').send(embed);
 
 		response.sendStatus(200);
 	});
