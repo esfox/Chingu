@@ -11,6 +11,12 @@ const fields =
 
 fields.forEach((id, i) => fields[i] = document.getElementById(id));
 
+document.addEventListener('DOMContentLoaded', () =>
+{
+  const elems = document.querySelectorAll('.modal');
+  var instances = M.Modal.init(elems);
+});
+
 async function done()
 {
   const data = fields.reduce((data, { id, value, innerHTML }) => 
@@ -19,14 +25,16 @@ async function done()
     return data;
   }, {});
 
-  await fetch(`https://esfox-chingu.glitch.me/wotd`,
-  {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  });
+  // await fetch(`https://esfox-chingu.glitch.me/wotd`,
+  // {
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify(data)
+  // });
 
-  alert('Word of the Day added.');
+
+  
+  window.location.reload();
 }
 
 document.onkeydown = event =>
