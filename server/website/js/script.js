@@ -28,7 +28,7 @@ async function done()
     body: JSON.stringify(data)
   });
 
-  window.location.reload();
+  M.toast({html: 'I am a toast!', classes: 'rounded', displayLength: 3600000});
 }
 
 document.onkeydown = event =>
