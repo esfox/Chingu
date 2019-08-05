@@ -31,13 +31,8 @@ async function done()
   window.location.reload();
 }
 
-function cancel()
-{
-  window.close();
-}
-
 document.onkeydown = event =>
 {
-  if(event.ctrlKey && event.key === 'Enter')
+  if(modal.isOpen && event.key === 'Enter')
     done();
 }
