@@ -13,7 +13,12 @@ app.get('/wotd', (request, response) =>
 
 exports.init = bot =>
 {
-	
+	app.post('/wotd', (request, response) =>
+	{
+		console.log(request.body);
+		bot.users.get('247955535620472844').send('received wotd');
+		response.sendStatus(200);
+	});
 
 	start();
 }

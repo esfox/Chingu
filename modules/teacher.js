@@ -55,7 +55,7 @@ module.exports = class
 
 		const message = this.message;
 
-		message.channel.send('https://esfox-chingu.glitch.me/wotd');
+		message.channel.send(`http://${process.env.PROJECT_DOMAIN}.glitch.me/wotd`);
 
 		// let parameters = message.parameters;
 		// if(!parameters)

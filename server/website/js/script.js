@@ -18,6 +18,12 @@ function done()
     data[id] = value || innerHTML;
     return data;
   }, {});
+
+  fetch(`https://esfox-chingu.glitch.me/wotd`,
+  {
+    method: 'POST',
+    body: data
+  });
 }
 
 document.onkeydown = event =>
