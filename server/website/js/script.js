@@ -66,3 +66,9 @@ document.onkeydown = event =>
   if(modal.isOpen && event.key === 'Enter')
     return done();
 }
+
+const testTranslation = fields.find(({ id }) => id === 'test_translation');
+testTranslation.oninput = () =>
+{
+  
+}
