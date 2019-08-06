@@ -8,34 +8,51 @@ function getWords()
   return JSON.parse(words);
 }
 
-function saveWords(words)
+function saveWord(word)
 {
+  const words = getWords();
+  words.push(word);
   writeFileSync('./data/wotd.json', JSON.stringify(words, null, 2));
 }
 
-exports.get = () => getWords();
-
-exports.add = data =>
+class Handler
 {
-  const
+  constructor(bot)
   {
-    word,
-    romanization,
-    translation,
-    example_sentence,
-    example_translation,
-    test_translation,
-  } = data;
+    this.bot = bot
+  }
 
-  const embed = new Discord.RichEmbed()
-    .setColor(embedColor)
-    .setTitle('📌  Word of the Day Added')
-    .addField('Word', word, true)
-    .addField('Romanization', romanization, true)
-    .addField('Translation', translation, true)
-    .addField('Example Sentence', example_sentence)
-    .addField('Example Sentence Translation', example_translation)
-    .addField('Test Translation', test_translation);
+  get()
+  {
+    return getWords();
+  }
 
-  bot.users.get('247955535620472844').send(embed);
+  add(data)
+  {
+    const
+    {
+      word,
+      romanization,
+      translation,
+      example_sentence,
+      example_translation,
+      test_translation,
+    } = data;
+  
+    const embed = new Discord.RichEmbed()
+      .setColor(embedColor)
+      .setTitle('📌  Word of the Day Added')
+      .addField('Word', word, true)
+      .addField('Romanization', romanization, true)
+      .addField('Translation', translation, true)
+      .addField('Example Sentence', example_sentence)
+      .addField('Example Sentence Translation', example_translation)
+      .addField('Test Translation', test_translation);
+  
+    saveWord(data);
+  
+    this.bot.users.get('247955535620472844').send(embed);
+  }
 }
+
+module.exports = bot => new Handler(bot);

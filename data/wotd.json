@@ -1,6 +1,18 @@
 [
-  "hahaha",
   {
-    "this": "is a test"
+    "word": "하다",
+    "translation": "to do",
+    "romanization": "ha da",
+    "example_sentence": "이걸 하고 있어요.",
+    "example_translation": "I want to do this.",
+    "test_translation": "오늘은 많은 일을 해야 돼요."
+  },
+  {
+    "word": "자다",
+    "translation": "to sleep",
+    "romanization": "ja da",
+    "example_sentence": "자 주세요.",
+    "example_translation": "Please sleep.",
+    "test_translation": "이따가 잘 거예요."
   }
 ]
