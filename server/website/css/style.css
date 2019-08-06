@@ -67,15 +67,6 @@
   box-shadow: 0 1px 0 0 #26a69a;
 }
 
-#test_translation[placeholder]:empty::before {
-  content: attr(placeholder);
-  color: #7e7e7e;
-}
-
-#test_translation[placeholder]:empty:not('') {
-  content: "";
-}
-
 .btn-floating {
   margin: 48px;
 }

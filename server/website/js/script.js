@@ -13,11 +13,11 @@ const fields =
 
 fields.forEach((id, i) => fields[i] = document.getElementById(id));
 
-let modal = M.Modal.init(document.getElementById('sent-modal'));
+let modal = M.Modal.init(document.getElementById('send-modal'));
 
-const data = () => fields.reduce((data, { id, value, innerText }) => 
+const data = () => fields.reduce((data, { id, value }) => 
 {
-  data[id] = value || innerText;
+  data[id] = value;
   return data;
 }, {});
 
