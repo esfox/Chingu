@@ -54,6 +54,7 @@
 #test_translation {
   resize: none;
   padding-bottom: 10px;
+  overflow: hidden;
   border: none;
   min-height: 75px;
   border-bottom: 1.3px solid #9d9d9d;

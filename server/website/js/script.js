@@ -70,5 +70,6 @@ document.onkeydown = event =>
 const testTranslation = fields.find(({ id }) => id === 'test_translation');
 testTranslation.oninput = () =>
 {
-  
+  testTranslation.style.height = 0;
+  testTranslation.style.height = testTranslation.scrollHeight + 'px';
 }
