@@ -43,8 +43,6 @@ async function done()
 
 function confirm()
 {
-  // TODO: Validation
-
   if(Object.values(data()).some(data => !data))
     return alert('Please fill out all fields.');
 
