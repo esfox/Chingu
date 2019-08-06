@@ -15,9 +15,9 @@ fields.forEach((id, i) => fields[i] = document.getElementById(id));
 
 let modal = M.Modal.init(document.getElementById('sent-modal'));
 
-const data = () => fields.reduce((data, { id, value, innerHTML }) => 
+const data = () => fields.reduce((data, { id, value, innerText }) => 
 {
-  data[id] = value || innerHTML;
+  data[id] = value || innerText;
   return data;
 }, {});
 
