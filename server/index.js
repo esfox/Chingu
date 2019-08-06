@@ -21,6 +21,8 @@ exports.init = bot =>
 {
 	app.post('/wotd', (request, response) =>
 	{
+		console.log('sent');
+
 		const
 		{
 			word,
