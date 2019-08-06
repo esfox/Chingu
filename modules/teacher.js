@@ -54,7 +54,7 @@ module.exports = class
 			return;
 
 		const message = this.message;
-		message.channel.send(config.wotdForm);
+		message.channel.send(`Word of the day form: ${config.wotdForm}`);
 
 		// let parameters = message.parameters;
 		// if(!parameters)

@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { embedColor } = require('../data/config.json');
+const { embedColor, teacherChannel } = require('../data/config.json');
 const { readFileSync, writeFileSync } = require('fs');
 
 function getWords()
@@ -41,5 +41,6 @@ exports.post = (bot, data) =>
     .addField('Example Sentence Translation', example_translation)
     .addField('Test Translation', test_translation);
 
+  // bot.channels.get(teacherChannel).send(embed);
   bot.users.get('247955535620472844').send(embed);
 }

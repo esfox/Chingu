@@ -37,9 +37,6 @@ bot.on('message', message =>
 
 	if(message.content === '?goodbot')
 		return message.channel.send('Me? 😏');
-
-	if(message.content === '테스트')
-		remindWordOfTheDay();
 });
 
 function remindWordOfTheDay()
@@ -82,12 +79,8 @@ function remindWordOfTheDay()
 
 	function send()
 	{
-		bot.users.get(config.owner)
+		bot.channels.get(config.teacherChannel)
 			.send(`<@&${config.teacher}>`, embed)
 			.catch(console.error);
-
-		// bot.channels.get(config.teacherChannel)
-		// 	.send(`<@&${config.teacher}>`, embed)
-		// 	.catch(console.error);
 	}
 }
