@@ -65,9 +65,9 @@ function remindWordOfTheDay()
 
 	const post = '@everyone\n'
 		+ `${word} ||\`${romanization}\`|| = __**${translation}**__\n\n`
-		+ `Example Sentence:\n${example_sentence}\n`
+		+ `Example sentence:\n${example_sentence}\n`
 		+ `"${example_translation}"\n\n`
-		+ `Test Translation:\n${test_translation}\n\n`
+		+ `Test translation:\n${test_translation}\n\n`
 		+ 'Practice translating it in #study-chat!';
 
 	embed

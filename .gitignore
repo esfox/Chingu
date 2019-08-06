@@ -74,6 +74,7 @@ misc/
 
 # glitch files
 shrinkwrap.yaml
+.swp
 
 # data
 data.json
