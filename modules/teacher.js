@@ -54,8 +54,7 @@ module.exports = class
 			return;
 
 		const message = this.message;
-		const form = `https://${process.env.PROJECT_DOMAIN}.glitch.me/새단어`;
-		message.channel.send(form);
+		message.channel.send(config.wotdForm);
 
 		// let parameters = message.parameters;
 		// if(!parameters)

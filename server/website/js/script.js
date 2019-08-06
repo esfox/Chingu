@@ -1,3 +1,5 @@
+const wotdURL = 'https://esfox-chingu.glitch.me/wotd';
+
 /** @type {Element[]} */
 const fields =
 [
@@ -23,7 +25,7 @@ async function done()
 {
   modal.close();
 
-  await fetch(`https://esfox-chingu.glitch.me/wotd`,
+  await fetch(wotdURL,
   {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -47,10 +49,10 @@ async function confirm()
   if(Object.values(fields).some(item => !item))
     return alert('Please fill out all fields.');
 
-  const words = await fetch(`https://esfox-chingu.glitch.me/wotd`)
+  const words = await fetch(wotdURL)
     .then(response => response.json());
   
-  if(words.some(item => fields.word === item.word))
+  if(words.length > 1  && words.some(item => fields.word === item.word))
     return alert(`"${fields.word}" has already been added.`);
 
   modal.open();

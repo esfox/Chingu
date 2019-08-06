@@ -37,6 +37,9 @@ bot.on('message', message =>
 
 	if(message.content === '?goodbot')
 		return message.channel.send('Me? 😏');
+
+	if(message.content === '테스트')
+		remindWordOfTheDay();
 });
 
 function remindWordOfTheDay()
@@ -64,9 +67,9 @@ function remindWordOfTheDay()
 	wordOfTheDay.save(words);
 
 	const post = '@everyone\n'
-		+ `${word} ||\`${romanization}\`|| = __**${translation}**__\n`
-		+ `Example Sentence:\n${example_sentence}\n\n`
-		+ `"${example_translation}"`
+		+ `${word} ||\`${romanization}\`|| = __**${translation}**__\n\n`
+		+ `Example Sentence:\n${example_sentence}\n`
+		+ `"${example_translation}"\n\n`
 		+ `Test Translation:\n${test_translation}\n\n`
 		+ 'Practice translating it in #study-chat!';
 
@@ -79,8 +82,12 @@ function remindWordOfTheDay()
 
 	function send()
 	{
-		bot.channels.get('385956869077860352')
+		bot.users.get(config.owner)
 			.send(`<@&${config.teacher}>`, embed)
 			.catch(console.error);
+
+		// bot.channels.get(config.teacherChannel)
+		// 	.send(`<@&${config.teacher}>`, embed)
+		// 	.catch(console.error);
 	}
 }

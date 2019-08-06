@@ -18,7 +18,7 @@ exports.save = words => saveWords(words);
 exports.post = (bot, data) =>
 {
   const words = getWords();
-  words.push(word);
+  words.push(data);
   saveWords(words);
 
   const
