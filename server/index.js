@@ -5,18 +5,22 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
-app.get("/", (_, response) =>
-{
-	console.log(Date.now() + " Ping Received");
-	response.sendStatus(200);
-});
-
 app.use(express.static('server/website'));
-app.get('/%EC%83%88%EB%8B%A8%EC%96%B4', (request, response) =>
-	response.sendFile(__dirname + '/website/index.html'));
 
 exports.init = bot =>
 {
+	app.get("/", (_, response) =>
+	{
+		console.log(Date.now() + " Ping Received");
+		response.sendStatus(200);
+	});
+	
+	app.get('/%EC%83%88%EB%8B%A8%EC%96%B4', (_, response) =>
+		response.sendFile(__dirname + '/website/index.html'));
+
+	app.get('/wotd', (_, response) =>
+		response.status(200).send(wordOfTheDay.get()));
+
 	app.post('/wotd', (request, response) =>
 	{
 		wordOfTheDay.add(request.body);

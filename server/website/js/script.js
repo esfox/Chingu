@@ -1,5 +1,5 @@
 /** @type {Element[]} */
-const field
+const fields =
 [
   'word',
   'translation',
@@ -41,10 +41,17 @@ async function done()
   M.toast({html: 'New Word of the Day added.', classes: 'rounded'});
 }
 
-function confirm()
+async function confirm()
 {
-  if(Object.values(data()).some(data => !data))
+  const data = data();
+  if(Object.values(data).some(data => !data))
     return alert('Please fill out all fields.');
+
+  const words = await fetch(`https://esfox-chingu.glitch.me/wotd`)
+    .then(response => response.json());
+  
+  if(words.some(item => data.word === item.word))
+    return alert(`${data.word} has already been added.`);
 
   modal.open();
 }

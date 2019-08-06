@@ -8,12 +8,12 @@ function getWords()
   return JSON.parse(words);
 }
 
-function saveWord(word)
+function saveWords(words)
 {
-  const words = getWords();
-  words.push(word);
   writeFileSync('./data/wotd.json', JSON.stringify(words, null, 2));
 }
+
+exports.get = () => getWords();
 
 exports.add = data =>
 {
@@ -36,8 +36,6 @@ exports.add = data =>
     .addField('Example Sentence', example_sentence)
     .addField('Example Sentence Translation', example_translation)
     .addField('Test Translation', test_translation);
-
-
 
   bot.users.get('247955535620472844').send(embed);
 }
