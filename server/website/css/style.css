@@ -8,6 +8,10 @@
   background-color: #36393f !important;
 }
 
+.page-footer {
+  background: linear-gradient(to bottom right, rgba(132, 210, 221, 1) , rgba(174, 167, 211, 1));
+}
+
 .modal-content > h4 {
   font-size: 25px; 
 }
