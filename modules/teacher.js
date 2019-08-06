@@ -54,8 +54,8 @@ module.exports = class
 			return;
 
 		const message = this.message;
-
-		message.channel.send(`http://${process.env.PROJECT_DOMAIN}.glitch.me/wotd`);
+		const form = `https://${process.env.PROJECT_DOMAIN}.glitch.me/새단어`;
+		message.channel.send(form);
 
 		// let parameters = message.parameters;
 		// if(!parameters)

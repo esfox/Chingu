@@ -14,15 +14,13 @@ app.get("/", (_, response) =>
 });
 
 app.use(express.static('server/website'));
-app.get('/wotd', (request, response) =>
+app.get('/%EC%83%88%EB%8B%A8%EC%96%B4', (request, response) =>
 	response.sendFile(__dirname + '/website/index.html'));
 
 exports.init = bot =>
 {
 	app.post('/wotd', (request, response) =>
 	{
-		console.log('sent');
-
 		const
 		{
 			word,

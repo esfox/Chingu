@@ -1,5 +1,5 @@
 /** @type {Element[]} */
-const fields =
+const field
 [
   'word',
   'translation',
