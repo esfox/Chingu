@@ -3,12 +3,11 @@ const bot = new Discord.Client();
 require('./server').init(bot);
 
 const fs = require('fs');
+const config = require('./data/config.json');
 const database = require('./data/database');
 const commands = require('./utils/commands');
 const reminder = require('./utils/reminder');
-
-const data = require('./data/data.json');
-const config = require('./data/config.json');
+const wordOfTheDay = require('./utils/word-of-the-day');
 
 const args = process.argv.slice(2).shift();
 bot
@@ -46,26 +45,25 @@ function remindWordOfTheDay()
 		.setColor(config.embedColor)
 		.setTitle('🔔 Word of the Day Reminder');
 
-	const words = data.daily_words;
+	const words = wordOfTheDay.get();
 	if(words.length === 0)
 	{
 		embed.setDescription("**There is no next word of the day!**");
 		return send();
 	}
 
-	const wordData = words.shift();
-	fs.writeFile(`./data/data.json`, JSON.stringify(data, null, '\t'), error =>
-	{
-		if(error)
-			return console.error(error);
+	const data = words.shift();
+	fs.writeFileSync(`./data/wotd.json`, JSON.stringify(words, null, '\t'));
 
-		embed.addField('Next Word...', `${wordData.word}`
-			+ ` = ${wordData.meaning}`);
-		embed.addField('Post Text', '```' + wordData.post + '```');
-		embed.setFooter(`${words.length} words saved.`);
+	if(error)
+		return console.error(error);
 
-		send();
-	});
+	embed.addField('Next Word...', `${data.word}`
+		+ ` = ${data.meaning}`);
+	embed.addField('Post Text', '```' + data.post + '```');
+	embed.setFooter(`${words.length} words saved.`);
+
+	send();
 
 	function send()
 	{

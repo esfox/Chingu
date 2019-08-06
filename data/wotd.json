@@ -14,5 +14,21 @@
     "example_sentence": "자 주세요.",
     "example_translation": "Please sleep.",
     "test_translation": "이따가 잘 거예요."
+  },
+  {
+    "word": "가다",
+    "translation": "to go",
+    "romanization": "ga da",
+    "example_sentence": "어제는 제 친구의 집에 갔어요.",
+    "example_translation": "I went to my friend's house yesterday.",
+    "test_translation": "언제 미국에 갈 거예요?"
+  },
+  {
+    "word": "asdf",
+    "translation": "asdf",
+    "romanization": "asdf",
+    "example_sentence": "asdf",
+    "example_translation": "asdf",
+    "test_translation": "asdf"
   }
 ]
