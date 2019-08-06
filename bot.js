@@ -52,16 +52,28 @@ function remindWordOfTheDay()
 		return send();
 	}
 
-	const data = words.shift();
-	fs.writeFileSync(`./data/wotd.json`, JSON.stringify(words, null, '\t'));
+  const
+  {
+    word,
+    romanization,
+    translation,
+    example_sentence,
+    example_translation,
+    test_translation,
+  } = words.shift();
+	wordOfTheDay.save(words);
 
-	if(error)
-		return console.error(error);
+	const post = '@everyone\n'
+		+ `${word} ||\`${romanization}\`|| = __**${translation}**__\n`
+		+ `Example Sentence:\n${example_sentence}\n\n`
+		+ `"${example_translation}"`
+		+ `Test Translation:\n${test_translation}\n\n`
+		+ 'Practice translating it in #study-chat!';
 
-	embed.addField('Next Word...', `${data.word}`
-		+ ` = ${data.meaning}`);
-	embed.addField('Post Text', '```' + data.post + '```');
-	embed.setFooter(`${words.length} words saved.`);
+	embed
+		.addField('Next Word...', `**${word}** = ${translation}`)
+		.addField('Post Text', '```' + post + '```')
+		.setFooter(`${words.length} words saved.`);
 
 	send();
 

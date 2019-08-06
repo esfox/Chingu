@@ -8,17 +8,19 @@ function getWords()
   return JSON.parse(words);
 }
 
-function saveWord(word)
+function saveWords(words)
 {
-  const words = getWords();
-  words.push(word);
   writeFileSync('./data/wotd.json', JSON.stringify(words, null, 2));
 }
 
 exports.get = () => getWords();
-
-exports.add = (bot, data) =>
+exports.save = words => saveWords(words);
+exports.post = (bot, data) =>
 {
+  const words = getWords();
+  words.push(word);
+  saveWords(words);
+
   const
   {
     word,
@@ -38,8 +40,6 @@ exports.add = (bot, data) =>
     .addField('Example Sentence', example_sentence)
     .addField('Example Sentence Translation', example_translation)
     .addField('Test Translation', test_translation);
-
-  saveWord(data);
 
   bot.users.get('247955535620472844').send(embed);
 }
