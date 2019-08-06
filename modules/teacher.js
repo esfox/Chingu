@@ -294,7 +294,7 @@ async function addReference(message, type)
 }
 
 const saveReferences = _ => save('references', references);
-const saveData = _ => save('data', data);
+// const saveData = _ => save('data', data);
 
 function save(file, contents)
 {
