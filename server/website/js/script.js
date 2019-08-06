@@ -55,10 +55,7 @@ async function confirm()
   if(words.length > 1  && words.some(item => fields.word === item.word))
     return alert(`"${fields.word}" has already been added.`);
 
-  const password = prompt("Please enter the teachers' password.");
-  if(password !== )
-
-  // modal.open();
+  modal.open();
 }
 
 document.onkeydown = event =>

@@ -41,6 +41,5 @@ exports.post = (bot, data) =>
     .addField('Example Sentence Translation', example_translation)
     .addField('Test Translation', test_translation);
 
-  // bot.channels.get(teacherChannel).send(embed);
-  bot.users.get('247955535620472844').send(embed);
+  bot.channels.get(teacherChannel).send(embed);
 }
