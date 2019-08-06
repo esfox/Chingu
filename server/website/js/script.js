@@ -1,5 +1,3 @@
-// TODO: make fields into Object
-
 /** @type {Element[]} */
 const fields =
 [
