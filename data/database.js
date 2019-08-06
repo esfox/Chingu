@@ -11,7 +11,8 @@ exports.init = _ => sequelize.sync()
     .then(_ => console.log('Connected to database.'))
     .catch(console.error);
 
-class User extends Model {}User.init({ user_id: Sequelize.STRING }, 
+class User extends Model {}
+User.init({ user_id: Sequelize.STRING }, 
 {
     sequelize,
     underscored: true,
@@ -151,4 +152,4 @@ const noneFound = info => Promise.reject(`You don't have ${info}.`);
 const problem = action => Promise.reject('A problem occurred'
     + ` in ${action} your note.`);
 
-const ignore = _ => {}mm
+const ignore = _ => {}
