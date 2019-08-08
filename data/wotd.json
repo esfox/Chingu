@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "word": "졸리다",
+    "translation": "to be tired (sleepy)",
+    "romanization": "jol li da",
+    "example_sentence": "밤을 새울 때마다, 절려서 아침에 자요.",
+    "example_translation": "Every time I stay up all night, I am tired so I sleep in the morning.",
+    "test_translation": "지난 주 엔 사회학 시험을 봤는데 -- 밤을 새웠고 졸렸다 ! 시험이 끝나자마자, 아파트에서 자러 갔다."
+  }
+]
