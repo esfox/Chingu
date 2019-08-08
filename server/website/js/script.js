@@ -32,13 +32,7 @@ async function done()
     body: JSON.stringify(data())
   });
 
-  fields.forEach(field =>
-  {
-    if(field.id === 'test_translation')
-      field.innerHTML = '';
-    else
-      field.value = '';
-  });
+  fields.forEach(field => field.value = '');
 
   M.toast({html: 'New Word of the Day added.', classes: 'rounded'});
 }
