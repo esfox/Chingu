@@ -23,7 +23,7 @@ exports.init = bot =>
 	app.get('/wotd', (_, response) =>
 		response.status(200).send(wordOfTheDay.get()));
 
-	app.post('/wotd', (request, response) =>
+	app.post('/wotd', (request, response) >=
 	{
 		wordOfTheDay.post(bot, request.body);
 		response.sendStatus(200);
