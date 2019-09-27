@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-require('./server').init(bot);
+// require('./server').init(bot);
 
 const fs = require('fs');
 const config = require('./data/config.json');
