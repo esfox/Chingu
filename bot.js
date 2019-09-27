@@ -12,7 +12,7 @@ const wordOfTheDay = require('./utils/word-of-the-day');
 const args = process.argv.slice(2).shift();
 bot
 	.login(process.env.TOKEN || args)
-	.catch(error => { if(error) console.log('gitgud haha') });
+	.catch(console.error);
 
 bot.on('ready', async _ =>
 {
