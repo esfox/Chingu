@@ -80,7 +80,7 @@ function remindWordOfTheDay()
 	function send()
 	{
 		bot.channels.get(config.teacherChannel)
-			.send(`<@&${config.teacher}>`, embed)
+			.send(`<@&${config.teacher}><@&${config.mentor}>`, embed)
 			.catch(console.error);
 	}
 }
