@@ -74,33 +74,35 @@ function remindWordOfTheDay()
     test_translation,
   } = words.shift();
 	wordOfTheDay.save(words);
-
-	const post = '@everyone\n'
-		+ `${word} ||\`${romanization}\`|| = __**${translation}**__\n\n`
-		+ `Example sentence:\n${example_sentence}\n`
-		+ `"${example_translation}"\n\n`
-		+ `Test translation:\n${test_translation}\n\n`
-		+ 'Practice translating it in #study-chat!';
+		
+	// const post = '@everyone\n'
+	// 	+ `${word} ||\`${romanization}\`|| = __**${translation}**__\n\n`
+	// 	+ `Example sentence:\n${example_sentence}\n`
+	// 	+ `"${example_translation}"\n\n`
+	// 	+ `Test translation:\n${test_translation}\n\n`
+	// 	+ 'Practice translating it in #study-chat!';
 
 	embed
 		.addField('Next Word...', `**${word}** = ${translation}`)
-		.addField('Post Text', '```' + post + '```')
+		// .addField('Post Text', '```' + post + '```')
 		.setFooter(`${words.length} words saved.`);
 
-	send();
+	send(embed);
 
-	// Mobile-friendly post copying
-	const mobilePost = '@everyone\n'
-		+ `${word} \\|\\|\\\`${romanization}\\\`\\|\\| = \\_\\_\\*\\*${translation}\\*\\*\\_\\_\n\n`
+	const post = '\\@everyone\n'
+		+ `${word} \\|\\|\\\`${romanization}\\\`\\|\\|`
+	  + ` = \\_\\_\\*\\*${translation}\\*\\*\\_\\_\n\n`
 		+ `Example sentence:\n${example_sentence}\n`
 		+ `"${example_translation}"\n\n`
 		+ `Test translation:\n${test_translation}\n\n`
 		+ 'Practice translating it in #study-chat!';
 
-	function send()
+	send(post);
+
+	function send(content)
 	{
 		bot.channels.get(config.teacherChannel)
-			.send(`<@&${config.teacher}> <@&${config.mentor}>`, embed)
+			.send(/* `<@&${config.teacher}> <@&${config.mentor}>`,  */content)
 			.catch(console.error);
 	}
 }
