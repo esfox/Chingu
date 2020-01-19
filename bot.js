@@ -37,6 +37,18 @@ bot.on('message', message =>
 
 	if(message.content === '?goodbot')
 		return message.channel.send('Me? 😏');
+
+	if(message.content === '---test')
+	{
+		const mobilePost = '@everyone\n'
+			+ `WORD \\|\\|\\\`ROMANIZATION\\\`\\|\\| = \\_\\_\\*\\*TRANSLATION\\*\\*\\_\\_\n\n`
+			+ `Example sentence:\nEXAMPLE_SENTENCE\n`
+			+ `"EXAMPLE_TRANSLATION"\n\n`
+			+ `Test translation:\nTEST_TRANSLATION\n\n`
+			+ 'Practice translating it in #study-chat!';
+
+		message.channel.send(mobilePost);
+	}
 });
 
 function remindWordOfTheDay()
@@ -77,10 +89,18 @@ function remindWordOfTheDay()
 
 	send();
 
+	// Mobile-friendly post copying
+	const mobilePost = '@everyone\n'
+		+ `${word} \\|\\|\\\`${romanization}\\\`\\|\\| = \\_\\_\\*\\*${translation}\\*\\*\\_\\_\n\n`
+		+ `Example sentence:\n${example_sentence}\n`
+		+ `"${example_translation}"\n\n`
+		+ `Test translation:\n${test_translation}\n\n`
+		+ 'Practice translating it in #study-chat!';
+
 	function send()
 	{
 		bot.channels.get(config.teacherChannel)
-			.send(`<@&${config.teacher}><@&${config.mentor}>`, embed)
+			.send(`<@&${config.teacher}> <@&${config.mentor}>`, embed)
 			.catch(console.error);
 	}
 }
