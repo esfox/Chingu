@@ -53,16 +53,15 @@ bot.on('message', message =>
 
 function remindWordOfTheDay()
 {
-	const embed = new Discord.RichEmbed()
-		.setColor(config.embedColor)
-		.setTitle('🔔 Word of the Day Reminder');
 
 	const words = wordOfTheDay.get();
 	if(words.length === 0)
-	{
-		embed.setDescription("**There is no next word of the day!**");
-		return send();
-	}
+		return send('@everyone\n**There is no next word of the day!**');
+		// embed.setDescription("**There is no next word of the day!**");
+  
+	const embed = new Discord.RichEmbed()
+		.setColor(config.embedColor)
+		.setTitle('🔔 Word of the Day Reminder');
 
   const
   {
