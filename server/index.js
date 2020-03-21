@@ -14,11 +14,11 @@ exports.init = bot =>
 	app.get("/", (_, response) =>
 	{
 		console.log(Date.now() + " Ping Received");
-		response.sendStatus(200);
+    response.status(200).send('hi');
 	});
 	
 	app.get('/%EC%83%88%EB%8B%A8%EC%96%B4', (_, response) =>
-		response.sendFile(__dirname + '/website/index.html'));
+		response.sendFile(__dirname + '/website/wotd.html'));
 
 	app.get('/wotd', (_, response) =>
 		response.status(200).send(wordOfTheDay.get()));
