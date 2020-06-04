@@ -1,0 +1,34 @@
+[
+  {
+    "word": "준비하다",
+    "translation": "To prepare",
+    "romanization": "Jun bi ha da",
+    "example_sentence": "나는 손님들이 올 시간에 맞춰서 점심을 준비했다.",
+    "example_translation": "I prepared the lunch so it would be ready when the guests arrived.",
+    "test_translation": "아직 멀었어? 지금 안 나가면 기차 시간에 늦을 수도 있어.\n금방 준비하니까 조금만 기다려!"
+  },
+  {
+    "word": "줄",
+    "translation": "Rope; string; line",
+    "romanization": "Jul ",
+    "example_sentence": "팔찌의 줄이 끊어지면서 진주가 바닥에 떨어졌다.",
+    "example_translation": "The string on the bracelet snapped and the pearls fell to the floor.",
+    "test_translation": "범인이 도망가지 못하게 하게.\n네, 손과 발을 줄로 묶어 놓겠습니다."
+  },
+  {
+    "word": "중간",
+    "translation": "Middle",
+    "romanization": "중간",
+    "example_sentence": "승규가 나와 지수의 중간을 비집고 들어와 앉았다.",
+    "example_translation": "Seng-gyu came and squeezed in between me and Jisoo and sat down.",
+    "test_translation": "우리 이따 어디서 만날까?\n우리 집과 너희 집의 중간에서 만나자."
+  },
+  {
+    "word": "즐기다",
+    "translation": "To appreciate; enjoy",
+    "romanization": "Jeul gi da",
+    "example_sentence": "우리는 바닷가에서 여름휴가를 즐겼다.",
+    "example_translation": "We enjoyed our summer vacation at the beach.",
+    "test_translation": "휴, 할 일이 많은데 이렇게 놀아도 될지 모르겠네.\n일단 걱정은 내일로 미루고, 오늘은 마음껏 즐기자."
+  }
+]
