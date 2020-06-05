@@ -1,6 +1,6 @@
 const wordOfTheDay = require('../utils/word-of-the-day');
 
-const http = require('http');
+// const http = require('http');
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -17,7 +17,7 @@ exports.init = bot =>
     response.status(200).send('hi');
 	});
 	
-	app.get('/%EC%83%88%EB%8B%A8%EC%96%B4', (_, response) =>
+	app.get('/add-wotd', (_, response) =>
 		response.sendFile(__dirname + '/website/wotd.html'));
 
 	app.get('/wotd', (_, response) =>
