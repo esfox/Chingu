@@ -34,7 +34,7 @@ exports.init = bot =>
 
 function start()
 {
-	const port = process.env.PORT;
+	const port = 1680;
 	app.listen(port);
 	console.log(`API Server listening on port ${port}`);
 	
