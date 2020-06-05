@@ -1,4 +1,4 @@
-const wotdURL = 'https://esfox-chingu.glitch.me/wotd';
+const wotdURL = '/wotd';
 
 /** @type {Element[]} */
 const fields =
