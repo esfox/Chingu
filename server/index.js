@@ -34,10 +34,12 @@ exports.init = bot =>
 
 function start()
 {
-	app.listen(process.env.PORT);
+	const port = process.env.PORT;
+	app.listen(port);
+	console.log(`API Server listening on port ${port}`);
 	
-	setInterval(() =>
-	{
-		http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-	}, 280000);
+	// setInterval(() =>
+	// {
+	// 	http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+	// }, 280000);
 }
