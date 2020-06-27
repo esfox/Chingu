@@ -14,12 +14,13 @@ bot
 	.login(process.env.TOKEN || args)
 	.catch(console.error);
 
+reminder.startWordReminder(remindWordOfTheDay);
+
 bot.on('ready', async _ =>
 {
 	await database.init();
 	console.log('Bot Started');
 
-	reminder.startWordReminder(remindWordOfTheDay);
 	console.log(`Started Word of the Day reminder.\n(${new Date()})`);
 });
 
