@@ -29,6 +29,7 @@ exports.post = (bot, data) =>
     example_sentence,
     example_translation,
     test_translation,
+    submitter,
   } = data;
 
   const embed = new Discord.RichEmbed()
@@ -39,7 +40,8 @@ exports.post = (bot, data) =>
     .addField('Translation', translation, true)
     .addField('Example Sentence', example_sentence)
     .addField('Example Sentence Translation', example_translation)
-    .addField('Test Translation', test_translation);
+    .addField('Test Translation', test_translation)
+    .addField('Submitted by', submitter);
 
   bot.channels.get(teacherChannel).send(embed);
 }

@@ -8,7 +8,8 @@ const fields =
   'romanization',
   'example_sentence',
   'example_translation',
-  'test_translation'
+  'test_translation',
+  'submitter',
 ];
 
 fields.forEach((id, i) => fields[i] = document.getElementById(id));
